@@ -1,0 +1,95 @@
+*
+{
+    margin: 0;
+    padding: 0;
+}
+body
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+
+    
+}
+.containercircle
+{
+    position: relative;
+    /* border: 2px solid red; */
+    /* width: 900px; */
+    display: flex;
+    justify-content: space-around;
+}
+.percent
+{
+    position: relative;
+    width: 120px;
+    height: 120px;
+    border-radius: 50px;
+    z-index: 1000;
+}
+
+.percent .number
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center ;
+    /* border-radius: 50%; */
+}
+.percent .number h2
+{
+    color: rgb(9, 9, 9);
+    font-weight: 700;
+    font-size: 30px;
+}
+.text
+{
+    position: relative;
+    margin-left: 30px;
+
+}
+svg
+{
+    position: relative;
+    width:150px;
+    height: 150px;
+    z-index: 1000;
+}
+svg circle
+{
+    width: 100%;
+    height: 100%;
+    fill: none;
+    stroke: rgb(195, 252, 190);
+    stroke-width: 5;
+    /* stroke-linecap: round; */
+    transform: translate(5px,5px);  
+}
+svg circle:nth-child(2)
+{
+    stroke-dasharray: 310;
+    stroke-dasharray: 310;
+}
+.card:nth-child(1) svg circle:nth-child(2)
+{
+    stroke-dashoffset: calc(310 - (310*78)/100);
+    stroke: rgb(6, 245, 22);
+    stroke-width: 10px;
+}
+.card:nth-child(2) svg circle:nth-child(2)
+{
+    stroke-dashoffset: calc(310 - (310*95)/100);
+    stroke: rgb(6, 245, 22);
+    stroke-width: 10px;
+}
+.card:nth-child(3) svg circle:nth-child(2)
+{
+    stroke-dashoffset: calc(310 - (310*59)/100);
+    stroke: rgb(6, 245, 22);
+    stroke-width: 10px;
+}
